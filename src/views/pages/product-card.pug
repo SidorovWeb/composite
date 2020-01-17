@@ -1,0 +1,17 @@
+extends ../layouts/default
+include ../helpers/mixins
+
+block variables
+	- const title = "Product card";
+	- const page = 'page-product-card'
+
+block content
+	#gallery.gallery
+		include ../../blocks/components/slider/slider.pug
+	.card-container.airSticky_stop-block
+		include ../../blocks/modules/card-content/card-content.pug
+		include ../../blocks/modules/card-sidebar/card-sidebar.pug
+	include ../../blocks/components/popup/popup.pug
+block scripts
+	script(src="js/main.js")
+	script(src="js/vendor.js")

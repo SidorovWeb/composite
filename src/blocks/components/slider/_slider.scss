@@ -1,0 +1,164 @@
+$pt: 159px;
+$pt2: 107px;
+$pt3: 67px;
+
+.my-swiper-container {
+	position: relative;
+	height: calc(100vh - 159px);
+
+	@media screen and (max-width: 1600px) {
+		height: calc(100vh - 107px);
+	}
+
+	@media screen and (max-width: 1280px) {
+		height: calc(100vh - 67px);
+	}
+
+	@media screen and (max-width: 1024px) {
+		height: 100vh;
+	}
+}
+
+.my-swiper-slide {
+	position: relative;
+	width: 100vw;
+	height: 100%;
+}
+
+
+.my-swiper-pagination {
+	bottom: 80px !important;
+	display: block;
+
+	@include sm-block {
+		display: none;
+	}
+
+	.swiper-pagination-bullet {
+		display: inline-block;
+		width: 12px;
+		height: 12px;
+		margin: 0 5px !important;
+		background: $white;
+		opacity: 1;
+		transition: $transition;
+		border-radius: 100%;
+	}
+
+	.swiper-pagination-bullet-active {
+		background: $tundora;
+	}
+}
+
+.content-slider {
+
+	&__img {
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+
+		& img {
+			@extend .content-slider__img;
+		}
+	}
+}
+
+.back {
+	position: absolute;
+	top: 78px;
+	left: 80px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 2;
+	width: 55px;
+	height: 55px;
+	background-color: $white;
+	transition: $transition;
+	border-radius: 50px;
+
+	@media screen and (max-width: 1600px) {
+		top: 30px;
+	}
+
+	@media screen and (max-width: 1024px) {
+		top: 107px;
+	}
+
+	@include sm-block {
+		left: 37px;
+	}
+
+	&:hover {
+		background-color: $tundora;
+
+		.back__icon {
+			fill: $white;
+		}
+	}
+
+	&__icon {
+		width: 13px;
+		height: 20px;
+		transition: $transition;
+		fill: $tundora;
+	}
+}
+
+.price {
+	position: absolute;
+	top: 78px;
+	right: 62px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 2;
+	padding: 10px 25px;
+	background-color: $white;
+	border-radius: 50px;
+	white-space: nowrap;
+
+	@media screen and (max-width: 1600px) {
+		top: 30px;
+	}
+
+	@media screen and (max-width: 1280px) {
+		top: 30px;
+	}
+
+	@media screen and (max-width: 1024px) {
+		top: 107px;
+	}
+
+	@include sm-block {
+		top: auto;
+		right: auto;
+		bottom: 78px;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+
+	&__text {
+		margin-right: 15px;
+		font-weight: 400;
+		font-size: 16px;
+		font-family: Arimo;
+		color: $mine-shaft;
+	}
+
+	&__money {
+		margin-right: 10px;
+		font-weight: 700;
+		font-size: 24px;
+		font-family: Arimo;
+		color: $mine-shaft;
+	}
+
+	&__currency {
+		font-size: 24px;
+	}
+}

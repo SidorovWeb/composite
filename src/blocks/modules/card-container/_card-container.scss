@@ -1,0 +1,18 @@
+.card-container {
+	position: relative;
+	display: flex;
+	padding-bottom: 42px;
+
+	@include md-block {
+		padding-bottom: 0;
+	}
+}
+
+
+.page-product-card {
+	overflow: initial;
+}
+
+.page-product-card.active {
+	overflow: hidden;
+}

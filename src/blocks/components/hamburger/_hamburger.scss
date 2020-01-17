@@ -1,0 +1,71 @@
+.hamburger,
+.m-menu__hamburger {
+	position: relative;
+	display: none;
+	z-index: 999;
+	width: 28px;
+	height: 25px;
+	margin-left: auto;
+	cursor: pointer;
+
+
+	@media screen and (max-width: 1140px) {
+		display: flex;
+		justify-content: flex-end;
+	}
+
+	&__span {
+		position: absolute;
+		width: inherit;
+		height: 3px;
+		margin-top: 10px;
+		background-color: $tundora;
+		opacity: 0;
+		transform: translateX(0) translateY(0) rotate(0);
+		transition: all 0.7s ease;
+
+		@media screen and (max-width: 1140px) {
+			opacity: 1;
+		}
+
+		&:nth-child(1) {
+			top: -7px;
+			width: 22px;
+			background-color: $tundora;
+		}
+
+		&:nth-child(2) {
+			width: 15px;
+			background-color: $tundora;
+		}
+
+		&:nth-child(3) {
+			top: 7px;
+			width: 8px;
+			background-color: $tundora;
+		}
+	}
+
+	&--open {
+		& .hamburger__span {
+			background-color: transparent;
+			transition: all 0.7s ease;
+
+			&:nth-child(1),
+			&:nth-child(3) {
+				background-color: $tundora;
+			}
+
+			&:nth-child(1) {
+				width: 80%;
+				transform: translateX(0) translateY(8px) rotate(45deg) !important;
+			}
+
+			&:nth-child(3) {
+				width: 80%;
+				transform: translateX(0) translateY(-6px) rotate(-45deg) !important;
+			}
+
+		}
+	}
+}

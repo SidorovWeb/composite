@@ -1,0 +1,47 @@
+.scroll-down {
+	position: absolute;
+	z-index: 9;
+	right: 84px;
+	bottom: 127px;
+
+	@include md-block {
+		right: 0px;
+		bottom: 57px;
+	}
+
+	@include sm-block {
+		display: none;
+	}
+
+
+	&::before {
+		position: absolute;
+		content: '';
+		width: 1px;
+		height: 107px;
+		background-color: $white;
+		bottom: -128px;
+		right: 9px;
+
+		@include md-block {
+			bottom: -117px;
+		}
+	}
+
+	&__link {
+		writing-mode: vertical-rl;
+		text-orientation: mixed;
+		color: $white;
+		font-family: Arimo;
+		font-size: 14px;
+		font-weight: 400;
+		letter-spacing: 3.08px;
+		line-height: 22px;
+		white-space: nowrap;
+		text-transform: uppercase;
+
+		@include sm-block {
+			font-size: 10px;
+		}
+	}
+}

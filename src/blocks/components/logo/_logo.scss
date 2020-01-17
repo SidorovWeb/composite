@@ -1,0 +1,14 @@
+.logo {
+	max-width: 165px;
+	cursor: pointer;
+
+	& img {
+		background-image: url(data:image/gif;base64,R0lGODlhAQABAPAAADAwMAAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==);
+		background-image: none;
+	}
+
+
+	@include sm-block {
+		max-width: 106px;
+	}
+}

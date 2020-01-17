@@ -1,0 +1,24 @@
+extends layouts/default
+include helpers/mixins
+
+block variables
+	- const title = "gulp-pug-starter"
+	- const page = 'page-main'
+
+block content
+	#pagepiling
+		.section.s-section.s-section-hero
+			include ../blocks/modules/hero/hero.pug
+		.section.s-section.s-section-produced.s-section--pr0.pp-scrollable
+			include ../blocks/modules/produced/produced.pug
+		.section.s-section.s-section-individual.s-section--pl0.pp-scrollable
+			include ../blocks/modules/individual/individual.pug
+		.section.s-section.s-section--pr0.pp-scrollable
+			include ../blocks/modules/design/design.pug
+		.section.s-section.s-section--pl0.pp-scrollable
+			include ../blocks/modules/assembly/assembly.pug
+		.section.s-section.s-section-catalog.pp-scrollable
+			include ../blocks/modules/catalog/catalog.pug
+block scripts
+	script(src="js/main.js")
+	script(src="js/vendor.js")

@@ -1,0 +1,255 @@
+.s-section-catalog {
+	overflow: auto;
+}
+
+.section-catalog {
+	display: flex;
+	justify-content: center;
+	height: 100%;
+	margin: 73px 0;
+
+	@include md-block {
+		margin: 0;
+		height: auto;
+	}
+
+	& .section-content__wrapper {
+		justify-content: center;
+		padding-left: 30px;
+		padding-right: 30px;
+
+
+		@include md-block {
+			padding-left: 0;
+			padding-right: 0;
+			padding-top: 50px;
+		}
+	}
+
+	&__content {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		max-width: 1527px;
+		margin-bottom: 71px;
+		margin-top: 67px;
+		width: 100%;
+
+		@include md-block {
+			padding-bottom: 60px;
+		}
+
+		@include sm-block {
+			margin-top: 30px;
+		}
+	}
+
+	&__head {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		margin-bottom: 51px;
+
+
+		@include md-block {
+			flex-direction: column;
+			align-items: flex-start;
+			padding-left: 15px;
+			padding-right: 15px;
+		}
+	}
+
+	&__title {
+		color: $mine-shaft;
+		font-family: Arimo;
+		font-weight: 700;
+		text-transform: uppercase;
+		padding-right: 37px;
+		@include fluidFontSize(20px, 40px, 567px, 1920px, 20px);
+
+		@include md-block {
+			margin-bottom: 20px;
+			padding-right: 0;
+		}
+	}
+
+	&__subtitle {
+		max-width: 350px;
+		color: $mine-shaft;
+		font-family: Arimo;
+		font-size: 14px;
+		font-weight: 400;
+		letter-spacing: 0.56px;
+		line-height: 20px;
+		transform: translateX(-235px);
+
+		@media screen and (max-width: 1280px) {
+			transform: none;
+		}
+	}
+
+	&__list {
+		display: flex;
+		justify-content: center;
+
+		@include md-block {
+			flex-wrap: wrap;
+			margin-top: 30px;
+		}
+	}
+
+	&__item {
+		width: calc(100% / 3);
+		margin-right: 30px;
+
+		&:last-child {
+			margin-right: 0;
+		}
+
+		@include md-block {
+			position: relative;
+			width: 100%;
+			margin-bottom: 40px;
+			margin-right: 0;
+
+			&:nth-child(1) {
+				padding-left: 37px;
+
+				.section-catalog-item__info {
+					@include md-block {
+						bottom: 50px;
+						left: 87px;
+						z-index: 1;
+					}
+				}
+			}
+
+			&:nth-child(2) {
+				padding-right: 37px;
+
+				.section-catalog-item__info {
+					@include md-block {
+						bottom: 50px;
+						right: 87px;
+						z-index: 1;
+					}
+				}
+			}
+
+			&:nth-child(3) {
+				padding-left: 37px;
+
+				.section-catalog-item__info {
+					@include md-block {
+						bottom: 50px;
+						left: 87px;
+						z-index: 1;
+					}
+				}
+			}
+		}
+	}
+
+	&__link {
+		margin-left: auto;
+		margin-right: auto;
+		align-self: center;
+		margin-top: get-vw(95px);
+
+		@include max-bp {
+			margin-top: 95px;
+		}
+
+		@media screen and (max-width: 1600px) {
+			margin-top: get-vw(85px);
+		}
+
+		@media screen and (max-width: 1400px) {
+			margin-top: get-vw(101px);
+		}
+
+		@media screen and (max-width: 1280px) {
+			margin-top: 50px;
+		}
+
+
+		@include md-block {
+			margin-top: 0;
+			margin-bottom: 30px;
+		}
+	}
+}
+
+.section-catalog-item__info {
+	@include md-block {
+		position: absolute;
+	}
+}
+
+.section-catalog-item {
+	&__img {
+		margin-bottom: 40px;
+		display: block;
+		position: relative;
+
+		@media screen and (max-width: 1280px) {
+			margin-bottom: 25px;
+		}
+
+		@include md-block {
+			margin-bottom: 0;
+
+			&:before {
+				content: '';
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				width: 100%;
+				height: 100%;
+				background-color: rgba($color-bg, .5);
+				z-index: 1;
+			}
+		}
+	}
+
+	&__title {
+		color: $mine-shaft;
+		font-family: Arimo;
+		font-size: 18px;
+		font-weight: 700;
+		text-transform: uppercase;
+		transition: $transition;
+		margin-bottom: 5px;
+		display: block;
+
+		@include md-block {
+			color: $white;
+			font-size: 24px;
+		}
+
+		&:hover {
+			color: rgba($mine-shaft, .7);
+
+			@include md-block {
+				color: rgba($white, .7);
+			}
+		}
+	}
+
+	&__text {
+		color: $mine-shaft;
+		font-family: Arimo;
+		font-size: 16px;
+		font-weight: 400;
+		letter-spacing: 0.64px;
+		line-height: 22px;
+
+		@include md-block {
+			color: $white;
+			font-size: 13px;
+			letter-spacing: 0.52px;
+		}
+	}
+}

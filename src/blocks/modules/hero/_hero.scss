@@ -1,0 +1,252 @@
+.s-section {
+	background-color: #fafafa;
+	overflow: hidden;
+
+	@media screen and (max-width: 1280px) {
+		overflow: auto
+	}
+}
+
+.s-section--pr0 {
+	& .section-content {
+		padding-left: 30px;
+
+		@include md-block {
+			padding-left: 0;
+			padding-right: 37px;
+		}
+	}
+}
+
+.s-section--pl0 {
+	& .section-content {
+		padding-right: 30px;
+
+		@include md-block {
+			padding-left: 37px;
+			padding-right: 0;
+		}
+
+	}
+}
+
+
+.section-content {
+	width: 100%;
+	position: relative;
+	height: 100%;
+
+
+	@include md-block {
+		margin: 0px 0px 100px 0px;
+	}
+
+	@include md-block {
+		height: auto;
+	}
+}
+
+.section-content__wrapper {
+	display: flex;
+	height: 100%;
+	width: 100%;
+
+	@include md-block {
+		flex-wrap: wrap;
+	}
+
+	@include md-block {
+		padding-top: 70px;
+		height: auto;
+	}
+}
+
+.s-section-hero {
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+	width: 100vw;
+	height: 100vh;
+	z-index: 99;
+	padding: get-vw(160px) get-vw(80px) get-vw(80px) get-vw(80px);
+
+	@include max-bp {
+		padding: 160px 80px 80px 80px;
+	}
+
+	@media screen and (max-width: 1280px) {
+		padding: 67px 30px 30px 30px;
+	}
+
+	@include md-block {
+		padding: 0;
+	}
+}
+
+.section {
+
+	&__content {
+		width: 100%;
+		height: 100%;
+		background-color: $color-bg;
+		position: relative;
+
+		@include md-block {
+			padding: 0 15px;
+		}
+
+		&:before {
+			content: '';
+			@extend .section__bg;
+			background-color: rgba($color-bg, .7);
+			z-index: 1;
+		}
+	}
+
+	&__col {
+		width: 50%;
+
+		@include md-block {
+			width: 100%;
+		}
+	}
+
+	&__bg {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		width: 100%;
+		height: 100%;
+
+		& img {
+			@extend .section__bg;
+		}
+	}
+
+	&__body {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+
+		@include md-block {
+			padding-left: 37px;
+		}
+	}
+
+	&__title {
+		line-height: 1.5;
+
+		@include md-block {
+			line-height: 2;
+		}
+	}
+
+	&__subtitle {
+		color: $white;
+		font-family: Arimo;
+		font-weight: 700;
+		letter-spacing: 4.7px;
+		@include fluidFontSize(16px, 28px, 567px, 1920px, 20px);
+		text-transform: uppercase;
+		display: block;
+	}
+
+	&__text {
+		font-family: Arimo;
+		font-size: 16px;
+		font-weight: 400;
+		letter-spacing: 0.64px;
+		line-height: 22px;
+		max-width: 550px;
+		padding-top: 16px;
+
+		@include md-block {
+			padding-top: 0;
+		}
+	}
+
+	&__link {
+		margin-top: 55px;
+
+		@include md-block {
+			margin-top: 30px;
+		}
+	}
+}
+
+.hero {
+
+	@include md-block {
+		padding-left: 37px;
+		padding-right: 37px;
+	}
+
+	&__body {
+		position: relative;
+		z-index: 2;
+		padding-left: get-vw(150px);
+		height: 100%;
+
+		@include md-block {
+			padding-left: 20px;
+		}
+
+		@include sm-block {
+			padding-left: 0;
+			padding-top: 60px;
+		}
+	}
+
+	&__title {
+		color: $white;
+		font-family: Arimo;
+		font-weight: 700;
+		text-transform: uppercase;
+		letter-spacing: 4.4px;
+		@include fluidFontSize(22px, 64px, 567px, 1920px, 30px);
+
+		@include md-block {
+			font-size: 44px;
+		}
+
+		@include sm-block {
+			margin-bottom: 10px;
+			line-height: 1.2;
+			font-size: 40px;
+		}
+	}
+
+	&__subtitle {
+		@include md-block {
+			margin-bottom: 40px;
+			line-height: 26px;
+			font-size: 16px;
+		}
+
+		@include sm-block {
+			letter-spacing: 2.5px;
+			line-height: 25px;
+		}
+	}
+
+	&__text {
+		color: $white;
+		max-width: 546px;
+
+		@include sm-block {
+			display: none;
+		}
+	}
+
+	&__text-content {
+		margin-bottom: -150px;
+
+		@media screen and (max-width: 1280px) {
+			margin-bottom: initial;
+		}
+	}
+}

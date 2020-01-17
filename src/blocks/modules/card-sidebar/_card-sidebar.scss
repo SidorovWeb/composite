@@ -1,0 +1,203 @@
+#aside {
+	flex-shrink: 0;
+	width: 498px;
+	z-index: 1;
+
+	@media screen and (max-width: 1600px) {
+		width: 448px;
+	}
+
+	@media screen and (max-width: 1440px) {
+		width: 360px;
+	}
+
+	@media screen and (max-width: 992px) {
+		width: 280px;
+	}
+
+	@include sm-block {
+		display: none;
+	}
+
+}
+
+.card-sidebar {
+	padding: 95px 120px 80px 120px;
+	margin-bottom: 1px;
+	background-color: $white;
+	box-shadow: 0 0 2px darken($main-bg, 10%);
+	transition: $transition;
+
+	@media screen and (max-width: 1600px) {
+		padding: 75px 100px 60px 100px;
+	}
+
+	@media screen and (max-width: 1440px) {
+		padding: 40px 60px 40px 60px;
+	}
+
+	@media screen and (max-width: 992px) {
+		padding: 40px 37px 40px 37px;
+	}
+
+
+	&__list {
+		padding-left: 30px;
+		margin-bottom: 330px;
+
+		@media screen and (max-width: 1600px) {
+			margin-bottom: 280px;
+		}
+
+		@media screen and (max-width: 1440px) {
+			margin-bottom: 200px;
+		}
+
+		@media screen and (max-width: 1280px) {
+			margin-bottom: 80px
+		}
+
+		@media screen and (max-width: 992px) {
+			margin-bottom: 60px
+		}
+	}
+
+	&__title {
+		color: $mine-shaft;
+		font-family: Arimo;
+		font-size: 28px;
+		font-weight: 700;
+		text-transform: uppercase;
+		margin-bottom: 30px;
+
+		@include md-block {
+			font-size: 24px;
+		}
+	}
+
+	&__item:not(:last-child) {
+		margin-bottom: 8px;
+	}
+
+	&__link {
+		position: relative;
+		color: $mine-shaft;
+		font-family: Arimo;
+		font-size: 16px;
+		font-weight: 400;
+		letter-spacing: 0.64px;
+		line-height: 22px;
+		transition: $transition;
+
+		&:before {
+			position: absolute;
+			content: '';
+			width: 15px;
+			height: 2px;
+			left: -30px;
+			background-color: #000000;
+			top: 50%;
+			transform: translateY(-50%);
+			opacity: 0;
+			transition: $transition;
+		}
+
+		&:hover {
+			color: rgba($mine-shaft, .5);
+
+			&:before {
+				opacity: .2;
+			}
+		}
+	}
+
+	&__btn {
+		width: 100%;
+
+		@include md-block {
+			font-size: 13px;
+		}
+	}
+}
+
+.card-sidebar__item {
+	&.active {
+		.card-sidebar__link {
+			&:before {
+				opacity: 1;
+			}
+		}
+	}
+}
+
+.options {
+	&__list {
+		width: 100%;
+		margin-bottom: 35px;
+	}
+
+	&__item {
+		width: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	&__item:not(:last-child) {
+		margin-bottom: 20px;
+
+		@include md-block {
+			margin-bottom: 10px;
+		}
+	}
+
+	&__label {
+		color: rgba($mine-shaft, 0.35);
+		font-family: Arimo;
+		font-size: 16px;
+		font-weight: 700;
+		letter-spacing: 0.64px;
+		line-height: 22px;
+
+		@include md-block {
+			font-size: 12px;
+		}
+	}
+
+	&__line {
+		flex-grow: 1;
+		margin: 0 15px;
+		height: 1px;
+		transform: translateY(3px);
+		border-bottom: 1px solid rgba($mine-shaft, 0.1);
+	}
+
+	&__title {
+		color: $mine-shaft;
+		font-family: Arimo;
+		font-size: 16px;
+		font-weight: 400;
+		letter-spacing: 0.64px;
+		line-height: 22px;
+
+		@include md-block {
+			font-size: 12px;
+		}
+	}
+}
+
+.sticky {
+	position: fixed;
+	z-index: 101;
+	box-shadow: 0 0 2px darken($main-bg, 10%);
+
+	@media screen and (max-width: 1024px) {
+		margin-top: 77px;
+	}
+}
+
+.stop {
+	position: relative;
+	z-index: 101;
+	box-shadow: 0 0 2px darken($main-bg, 10%);
+}

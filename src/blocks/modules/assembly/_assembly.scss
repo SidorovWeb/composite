@@ -1,0 +1,95 @@
+.assembly {
+
+	@include md-block {
+		padding-left: 0 !important;
+		padding-right: 37px !important;
+	}
+
+	&__body {
+
+		@include md-block {
+			order: -1;
+			padding-left: 37px;
+			padding-right: 0;
+		}
+	}
+
+	&__title {
+		line-height: 1.4;
+
+		@include md-block {
+			margin-top: 60px !important;
+		}
+	}
+
+	&__text {
+		transform: translateY(-10px);
+
+		@include md-block {
+			transform: none;
+		}
+
+		& p:nth-child(2) {
+			transform: translateY(8px);
+
+			@include md-block {
+				transform: none;
+			}
+		}
+	}
+
+	&__text-content {
+		padding-right: 60px;
+
+		@media screen and (max-width: 1400px) {
+			padding-right: 0;
+			padding-left: 30px;
+		}
+
+		@include md-block {
+			padding-left: 0;
+		}
+	}
+
+	&__title {
+		@include md-block {
+			margin-top: 35px;
+		}
+	}
+
+	&__subtitle {
+		color: $mine-shaft;
+		font-family: Arimo;
+		font-weight: 700;
+		@include fluidFontSize(20px, 42px, 567px, 1920px, 20px);
+		text-transform: uppercase;
+		display: block;
+		line-height: 1;
+		transform: translateY(-5px);
+		letter-spacing: -1.3px;
+
+		@include md-block {
+			transform: none;
+			letter-spacing: initial;
+			margin-bottom: 30px;
+		}
+	}
+
+	&__link {
+		margin-top: 42px;
+		transform: translateY(-5px);
+
+		@include md-block {
+			margin-top: 30px;
+			transform: none;
+			margin-bottom: 60px;
+		}
+	}
+
+	&__img {
+		@include md-block {
+			max-height: 300px;
+			overflow: hidden;
+		}
+	}
+}

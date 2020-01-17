@@ -1,0 +1,35 @@
+form#ajax-contact-form.form(enctype='multipart/form-data', method='post')
+	.container-group
+		.form-group.form-group__input
+			+icon('check', 'form__icon')
+			+icon('cancel', 'form__icon-cancel')
+			label.form__label(for='nameFF') Ваше полное имя (ФИО)
+			input#nameFF.form__input(name='nameFF', type='text')
+		.form-group.form-group__input
+			+icon('check', 'form__icon')
+			+icon('cancel', 'form__icon-cancel')
+			label.form__label(for='telFF') Номер телефона
+			input#telFF.form__input(name='telFF', type='tel')
+		.form-group.form-group__input
+			+icon('check', 'form__icon')
+			+icon('cancel', 'form__icon-cancel')
+			label.form__label(for='emailFF') E-mail
+			input#emailFF.form__input(name='emailFF', type='email')
+		.form-group.form-group__input
+			+icon('check', 'form__icon')
+			+icon('cancel', 'form__icon-cancel')
+			label.form__label(for='compFF') Ваша организация
+			input#compFF.form__input(name='compFF', type='text')
+			span.dispens Необязательное поле*
+		.form-group.form-group__textarea
+			+icon('check', 'form__icon')
+			+icon('cancel', 'form__icon-cancel')
+			label.form__label-textarea(for='textareaFF') Подробно опишите Ваш вопрос или предложение ...
+			textarea#textareaFF.form__textarea(name='textareaFF')
+		.form-group__check
+			//- label.form__label-check(for='checkFF') Нажимая на кнопку вы соглашаетесь на обработку персональных данных
+			//- 	input#contactFF(name='checkFF', type='checkbox')
+			input#checkboxFF(name='checkboxFF', type='checkbox')
+			label.form__label-check(for='checkboxFF') Нажимая на кнопку вы соглашаетесь на обработку персональных данных
+		.form-group__bnt
+			button#submitFF.btn.btn-main(type='submit') Отправить сообщение

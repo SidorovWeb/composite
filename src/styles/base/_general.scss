@@ -1,0 +1,162 @@
+html,
+body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-width: 320px;
+    font-weight: 400;
+    line-height: 1.5;
+    font-family: $arimo;
+    color: $mine-shaft;
+    background-color: $main-bg;
+    scroll-behavior: smooth;
+    text-rendering: optimizeSpeed;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Удаляем все анимации и переходы для людей, которые предпочитай их не использовать */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    border: 0;
+    clip: rect(0, 0, 0, 0);
+    -webkit-clip-path: inset(100%);
+    clip-path: inset(100%);
+}
+
+img.lazy {
+    background-image: url(data:image/gif;base64,R0lGODlhAQABAPAAADAwMAAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==);
+    transition: transform .3s ease;
+}
+
+.svg-sprite-icon {
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+}
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style-type: none;
+}
+
+a,
+button {
+    outline: none;
+}
+
+a:hover,
+a:focus {
+    text-decoration: none;
+}
+
+.container {
+    @include container();
+    @include sm(max-width, 510px);
+    @include md(max-width, 690px);
+    @include lg(max-width, 930px);
+    @include xl(max-width, 1110px);
+}
+
+.row {
+    @include row-flex();
+}
+
+.item {
+    @include col();
+    @include size(3);
+    @include size-lg(4);
+    @include size-md(6);
+    @include size-sm(12);
+}
+
+.img--bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+}
+
+.img--poly {
+    font-family: 'object-fit: cover';
+}
+
+.header {
+    flex: 0 0 auto;
+}
+
+.content {
+    position: relative;
+    flex: 1 0 auto;
+}
+
+.footer {
+    flex: 0 0 auto;
+}
+
+.hover {
+    transition: all .2s cubic-bezier(.02, .01, .47, 1);
+    box-shadow: 0 20px 20px rgba(0, 0, 0, .04);
+
+    &:hover {
+        transform: translateY(-4px);
+        transition-delay: 0s !important;
+        box-shadow: 0 40px 40px rgba(0, 0, 0, .06);
+    }
+}
+
+.h2 {
+    font-family: Arimo;
+    font-weight: 700;
+    text-transform: uppercase;
+}

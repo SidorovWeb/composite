@@ -1,0 +1,96 @@
+.btn {
+	display: inline-block;
+	padding: 1.84em 2.28em;
+	line-height: 1;
+	text-transform: uppercase;
+	cursor: pointer;
+	outline: none;
+	border: 1px solid transparent;
+	white-space: nowrap;
+
+	&:hover {
+		border: 1px solid #d9d9d9;
+	}
+
+	@include sm-block {
+		padding: 1.7em 2.28em;
+		font-size: 12px;
+	}
+
+}
+
+.btn--white {
+	background-color: $white;
+	color: $tundora;
+	font-family: Arimo;
+	font-size: 14px;
+	font-weight: 700;
+	letter-spacing: 0.84px;
+	text-transform: uppercase;
+	transition: $transition;
+
+	&:hover {
+		background-color: $color-bg;
+		color: $white;
+
+		& .icon {
+			fill: $white;
+			transform: translateX(5px);
+		}
+	}
+}
+
+.btn--black {
+	background-color: $color-bg;
+	color: $white;
+	font-family: Arimo;
+	font-size: 14px;
+	font-weight: 700;
+	letter-spacing: 0.84px;
+	text-transform: uppercase;
+	transition: $transition;
+
+	&:hover {
+		background-color: $white;
+		color: $mine-shaft;
+	}
+}
+
+.btn--grey {
+	background-color: $gallery;
+	color: $text;
+	font-family: Arimo;
+	font-size: 14px;
+	font-weight: 700;
+	letter-spacing: 0.84px;
+	text-transform: uppercase;
+	transition: $transition;
+
+	&:hover {
+		background-color: $mine-shaft;
+		color: $white;
+	}
+}
+
+.btn__link {
+	display: inline-flex;
+	justify-content: center;
+
+	& .icon {
+		margin-left: 10px;
+		width: 20px;
+		height: 13px;
+		fill: $tundora;
+		transition: $transition;
+		transform: translateY(-1px);
+
+		@include sm-block {
+			width: 16px;
+			height: 12px;
+		}
+	}
+}
+
+.btn--border {
+	border: 1px solid #d9d9d9;
+}

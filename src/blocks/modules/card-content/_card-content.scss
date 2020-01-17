@@ -1,0 +1,345 @@
+.card-content {
+	flex-grow: 1;
+	width: 100%;
+}
+
+$pt: 80px;
+$pr: 37px;
+$pb: 80px;
+$pl: 114px;
+$pt1280: 60px;
+$pr1280: 37px;
+$pb1280: 60px;
+$pl1280: 80px;
+$pt992: 58px;
+$pr992: 37px;
+$pb992: 40px;
+$pl992: 37px;
+$title1024: 34px;
+$title768: 24px;
+
+
+.description {
+	padding: 111px 37px 120px 214px;
+
+	@media screen and (max-width: 1440px) {
+		padding: $pt $pr $pb $pl;
+	}
+
+	@media screen and (max-width: 1280px) {
+		padding: $pt1280 $pr1280 $pb1280 $pl1280;
+	}
+
+	@media screen and (max-width: 992px) {
+		padding: $pt992 $pr992 $pb992 $pl992;
+	}
+
+	&__title {
+		margin-bottom: 30px;
+		font-weight: 700;
+		font-size: 40px;
+		font-family: Arimo;
+		color: $mine-shaft;
+		text-transform: uppercase;
+
+		@media screen and (max-width: 1024px) {
+			font-size: $title1024;
+		}
+
+		@include md-block {
+			font-size: $title768;
+			margin-bottom: 20px;
+		}
+	}
+
+	&__text {
+		max-width: 715px;
+		font-weight: 400;
+		font-size: 16px;
+		line-height: 22px;
+		font-family: Arimo;
+		color: $mine-shaft;
+		letter-spacing: 0.64px;
+	}
+}
+
+.kitchen-form {
+
+	background-color: $white;
+
+	&__title {
+		margin-bottom: 50px;
+		padding-left: 214px;
+		font-weight: 700;
+		font-size: 40px;
+		font-family: Arimo;
+		color: $mine-shaft;
+		text-transform: uppercase;
+		padding-right: 37px;
+		line-height: 1.3;
+
+		@media screen and (max-width: 1440px) {
+			padding-left: $pl;
+		}
+
+		@media screen and (max-width: 1280px) {
+			padding-left: $pl1280;
+		}
+
+		@media screen and (max-width: 1024px) {
+			font-size: $title1024;
+		}
+
+		@media screen and (max-width: 992px) {
+			padding-left: $pl992;
+		}
+
+		@include md-block {
+			font-size: $title768;
+			text-align: center;
+		}
+	}
+
+	&__wrapper {
+		padding-top: 110px;
+
+		@media screen and (max-width: 1440px) {
+			padding-top: $pt;
+		}
+
+		@media screen and (max-width: 1280px) {
+			padding-top: $pt1280;
+		}
+
+		@media screen and (max-width: 1280px) {
+			padding-top: $pt992;
+		}
+	}
+
+	&__tabs {
+		display: flex;
+		align-items: center;
+		padding-bottom: 115px;
+		padding-left: 214px;
+		padding-right: 37px;
+
+
+		&>*:not(:last-child) {
+			margin-right: 120px;
+
+			@media screen and (max-width: 1440px) {
+				margin-right: 100px;
+			}
+
+			@media screen and (max-width: 1170px) {
+				margin-right: 60px;
+			}
+
+			@media screen and (max-width: 992px) {
+				margin-right: 30px;
+			}
+
+			@include sm-block {
+				margin-right: 0;
+			}
+		}
+
+		@media screen and (max-width: 1440px) {
+			padding-bottom: $pb;
+			padding-left: $pl;
+		}
+
+		@media screen and (max-width: 1280px) {
+			padding-bottom: $pb1280;
+			padding-left: $pl1280;
+		}
+
+		@media screen and (max-width: 992px) {
+			padding-bottom: $pb992;
+			padding-left: $pl992;
+			justify-content: space-between;
+		}
+
+		@include md-block {
+			flex-direction: column;
+			padding-bottom: 18px;
+		}
+	}
+
+	&__content {
+		padding-top: 113px;
+		padding-right: 37px;
+		padding-left: 214px;
+		background-color: $main-bg;
+
+		@media screen and (max-width: 1440px) {
+			padding-top: $pt;
+			padding-right: $pr;
+			padding-left: $pl;
+		}
+
+		@media screen and (max-width: 1280px) {
+			padding-top: $pt1280;
+			padding-right: $pr1280;
+			padding-left: $pl1280;
+		}
+
+		@media screen and (max-width: 992px) {
+			padding-top: $pt992;
+			padding-right: $pr992;
+			padding-left: $pl992;
+		}
+
+
+	}
+
+	&__tab {
+		text-align: center;
+		cursor: pointer;
+		opacity: .5;
+		transition: $transition;
+		position: relative;
+		padding-bottom: 60px;
+
+		@include md-block {
+			margin-bottom: 57px;
+		}
+
+		&:hover {
+			opacity: 1;
+		}
+
+		&.active {
+			opacity: 1;
+		}
+
+		img {
+			background-image: none !important;
+		}
+
+		&-title {
+			position: absolute;
+			display: block;
+			font-weight: 700;
+			font-size: 14px;
+			font-family: Arimo;
+			color: $text;
+			letter-spacing: 0.84px;
+			text-transform: uppercase;
+			white-space: nowrap;
+			bottom: 0;
+			left: 0;
+			right: 0;
+		}
+	}
+
+	&__btn-wrapper {
+		display: none;
+
+		@include sm-block {
+			display: block;
+			padding: 5px 37px 0px 37px;
+			margin-bottom: 60px;
+		}
+	}
+
+	&__btn {
+		@include sm-block {
+			width: 100%;
+			padding: 1.75em 2.28em;
+			font-size: 14px;
+		}
+	}
+}
+
+
+.material,
+.color {
+	max-width: 850px;
+
+	&__title {
+		margin-bottom: 54px;
+		font-weight: 700;
+		font-size: 40px;
+		font-family: Arimo;
+		color: $mine-shaft;
+		text-transform: uppercase;
+
+		@media screen and (max-width: 1024px) {
+			font-size: $title1024;
+		}
+
+		@include md-block {
+			font-size: $title768;
+			text-align: center;
+			margin-bottom: 45px;
+		}
+	}
+
+	&__list {
+		display: flex;
+		margin-bottom: 112px;
+		flex-wrap: wrap;
+
+		@include md-block {
+			margin-bottom: 80px;
+		}
+	}
+
+	&__item {
+		position: relative;
+		width: calc(100% / 5);
+		overflow: hidden;
+
+		&:hover {
+			.material__block {
+				opacity: 1;
+				transform: translateY(0);
+			}
+
+			.color__block {
+				opacity: 1;
+				transform: translateY(0);
+			}
+		}
+
+		@include md-block {
+			width: calc(100% / 2 - 10px);
+			margin-bottom: 10px;
+
+			&:nth-child(1n) {
+				margin-right: 10px;
+			}
+		}
+	}
+
+	&__block {
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		display: block;
+		width: 100%;
+		height: 62px;
+		font-weight: 700;
+		font-size: 14px;
+		line-height: 62px;
+		font-family: Arimo;
+		text-align: center;
+		color: $text;
+		background-color: $white;
+		opacity: 0;
+		transition: $transition;
+		white-space: nowrap;
+		text-transform: uppercase;
+		letter-spacing: 0.84px;
+		padding: 0 10px;
+		transform: translateY(110%);
+
+		@include md-block {
+			height: 40px;
+			line-height: 40px;
+			font-size: 12px;
+		}
+	}
+}

@@ -1,0 +1,81 @@
+.nav {
+	@media screen and (max-width: 1140px) {
+		z-index: 1;
+	}
+
+	&__list {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		@media screen and (max-width: 1140px) {
+			z-index: 1;
+			position: fixed;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			flex-direction: column;
+			align-items: flex-start;
+			width: 50%;
+			height: 100%;
+			padding-left: 10%;
+			background-color: $main-bg;
+			transform: translateX(110%);
+			transition: transform .7s ease;
+		}
+
+		@include sm-block {
+			width: 85%;
+		}
+	}
+
+	&__item {
+		@media screen and (max-width: 1140px) {
+			margin-bottom: 20px;
+			font-size: 20px;
+		}
+	}
+
+	&__item:not(:last-child) {
+		margin-right: 96px;
+
+		@media screen and (max-width: 1280px) {
+			margin-right: 46px;
+		}
+
+		@media screen and (max-width: 1140px) {
+			margin-right: 0;
+		}
+	}
+
+	&__item:last-child {
+		margin-right: 17px;
+	}
+
+	&__link {
+		font-weight: 700;
+		font-size: 12px;
+		font-family: Arimo;
+		color: $text;
+		transition: $transition;
+		letter-spacing: 3px;
+		text-transform: uppercase;
+		white-space: nowrap;
+
+		@media screen and (max-width: 1140px) {
+			z-index: 100;
+			color: $mine-shaft;
+		}
+
+		&:hover {
+			color: rgba($text, .7);
+		}
+	}
+}
+
+.open {
+	.nav__list {
+		transform: translateX(0);
+		transition: transform .7s ease;
+	}
+}

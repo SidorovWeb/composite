@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>gulp-pug-starter</title>
+    <meta name="theme-color" content="#fff">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta property="og:image" content="img/@1x/1.jpg">
+    <!-- Chrome, Firefox OS and Opera-->
+    <meta name="theme-color" content="#000000">
+    <!-- Windows Phone-->
+    <meta name="msapplication-navbutton-color" content="#000000">
+    <!-- iOS Safari-->
+    <meta name="apple-mobile-web-app-status-bar-style" content="#000000">
+    <link rel="shortcut icon" href="img/favicons/favicon.ico" type="image/x-icon">
+    <link rel="icon" sizes="16x16" href="img/favicons/favicon-16x16.png" type="image/png">
+    <link rel="icon" sizes="32x32" href="img/favicons/favicon-32x32.png" type="image/png">
+    <link rel="apple-touch-icon-precomposed" href="img/favicons/apple-touch-icon-precomposed.png">
+    <link rel="apple-touch-icon" href="img/favicons/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="57x57" href="img/favicons/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="img/favicons/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="img/favicons/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="img/favicons/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="img/favicons/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="img/favicons/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="img/favicons/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="img/favicons/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="167x167" href="img/favicons/apple-touch-icon-167x167.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon-180x180.png">
+    <link rel="apple-touch-icon" sizes="1024x1024" href="img/favicons/apple-touch-icon-1024x1024.png">
+    <link rel="preload" as="font" href="fonts/Arimo-Regular.woff2" type="font/woff2" crossorigin>
+    <link rel="preload" as="font" href="fonts/Arimo-Bold.woff2" type="font/woff2" crossorigin>
+    <link rel="preload" as="font" href="fonts/Arimo-Regular.woff" type="font/woff" crossorigin>
+    <link rel="preload" as="font" href="fonts/Arimo-Bold.woff" type="font/woff" crossorigin>
+    <link rel="stylesheet" href="styles/main.min.css">
+  </head>
+  <body class="page-main">
+    <header class="header">
+      <div class="top"><a class="logo" href="/" title="COMPOSITE DNA"><img alt="Лого сайта" src="img/logo/logo.png" height="48" width="165"></a>
+        <nav class="nav">
+          <ul class="nav__list">
+            <li class="nav__item"><a class="nav__link" href="#" title="Главная">Главная</a></li>
+            <li class="nav__item"><a class="nav__link" href="#" title="Каталог Решений">Каталог Решений</a></li>
+            <li class="nav__item"><a class="nav__link" href="#" title="Доставка и сборка">Доставка и сборка</a></li>
+            <li class="nav__item"><a class="nav__link" href="#" title="Контакты">Контакты</a></li>
+          </ul>
+        </nav>
+        <div class="hamburger"><span class="hamburger__span"></span><span class="hamburger__span"></span><span class="hamburger__span"></span></div>
+      </div>
+    </header>
+    <div class="content">
+      <div id="pagepiling">
+        <div class="section s-section s-section-hero">
+          <div class="section__content hero">
+            <div class="section__bg"><img class="lazy" alt="Элитные кухни" src="data:image/gif;base64,R0lGODlhLAAVAIAAAP///wAAACH5BAEAAAEALAAAAAAsABUAAAIdjI+py+0Po5y02ouz3rz7D4biSJbmiabqyrZuVgAAOw==" data-src="img/home/1.jpg" height="750" width="1200"/>
+            </div>
+            <div class="section__body hero__body">
+              <div class="section__text-content hero__text-content">
+                <h2 class="h2 section__title hero__title">Элитные кухни</h2>
+                <div class="section__subtitle hero__subtitle">из композитных материалов</div>
+                <div class="section__text hero__text">
+                  <p>Дополните облик своей кухни и сделайте ее по-настоящему уникальной на уровне материалов. Composite DNA создает кухни с применением карбона, стали, меди и других металлов и сплавов.</p>
+                </div><a class="btn btn--white btn__link section__link" href="#" title="Смотреть все">Смотреть все
+                  <svg class="svg-sprite-icon icon icon-arrow-right section__icon">
+                    <use xlink:href="img/sprites/sprite.svg#arrow-right"></use>
+                  </svg></a>
+              </div>
+              <div class="scroll-down"><a class="scroll-down__link" href="#" title="Scroll down">Scroll down</a></div>
+            </div>
+          </div>
+        </div>
+        <div class="section s-section s-section-produced s-section--pr0 pp-scrollable">
+          <div class="section-content produced">
+            <div class="section-content__wrapper">
+              <div class="section__body section__col produced__body">
+                <div class="section__text-content produced__text-content">
+                  <h2 class="h2 section__title produced__title">Произведено в России</h2>
+                  <div class="section__text produced__text">
+                    <p>Фасады из эмали, ДСП или пластика есть у многих производителей. Но мы занимаемся тем, что пока не делает никто другой: кухнями с применением высококлассных композитных материалов.</p>
+                    <p>
+                       Вы получаете кухню, которую не может произвести по доступной цене ни одна фабрика в России. Дорогостоящие аналоги есть только у итальянских и немецких производителей.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="section__img section__col"><img class="lazy" alt="Элитные кухни" src="data:image/gif;base64,R0lGODlhFQANAIAAAP///wAAACH5BAEAAAEALAAAAAAVAA0AAAIOjI+py+0Po5y02ouzxgUAOw==" data-src="img/produced/1.jpg" height="585" width="945"/>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="section s-section s-section-individual s-section--pl0 pp-scrollable">
+          <div class="section-content individual">
+            <div class="section-content__wrapper">
+              <div class="section__img section__col"><img class="lazy" alt="Индивидуальный проект" src="data:image/gif;base64,R0lGODlhFQANAIAAAP///wAAACH5BAEAAAEALAAAAAAVAA0AAAIOjI+py+0Po5y02ouzxgUAOw==" data-src="img/individual/1.jpg" height="585" width="945"/>
+              </div>
+              <div class="section__body section__col individual__body">
+                <div class="section__text-content individual__text-content">
+                  <h2 class="h2 section__title individual__title">Индивидуальный проект</h2>
+                  <div class="section__text individual__text">
+                    <p>Composite DNA создает индивидуальные проекты на основе ваших пожеланий. У нас нет типовых проектов: заменяются любые материалы фасада практически в любых комбинациях.</p>
+                    <p>Вы получаете выбор даже на уровне одного материала. Мы умеем придавать покрывать его матовым или глянцевым лаком, а также менять цвет химическим травлением.</p>
+                  </div><a class="btn btn--black btn__link section__link individual__link" href="#" title="Заказать проект">Заказать проект</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="section s-section s-section--pr0 pp-scrollable">
+          <div class="section-content design">
+            <div class="section-content__wrapper">
+              <div class="section__body section__col design__body">
+                <div class="section__text-content design__text-content">
+                  <h2 class="h2 section__title design__title">Дизайн, достойный вас</h2>
+                  <div class="section__text">
+                    <div class="wrapper design-wrapper">
+                      <div class="tabs design__tabs"><span class="tab btn btn--grey design__tab">Карбон<img class="lazy" alt="Карбон" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAEALAAAAAABAAEAAAICTAEAOw==" data-src="img/design/2.jpg" height="118" width="118"/></span><span class="tab btn btn--grey design__tab">Медь<img class="lazy" alt="Медь" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAEALAAAAAABAAEAAAICTAEAOw==" data-src="img/design/2.jpg" height="118" width="118"/></span><span class="tab btn btn--grey design__tab">Сталь<img class="lazy" alt="Сталь" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAEALAAAAAABAAEAAAICTAEAOw==" data-src="img/design/2.jpg" height="118" width="118"/></span><span class="tab btn btn--grey design__tab">Олово<img class="lazy" alt="Олово" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAEALAAAAAABAAEAAAICTAEAOw==" data-src="img/design/2.jpg" height="118" width="118"/></span></div>
+                      <div class="tab_content design__content">
+                        <div class="tab_item design__item">
+                          <p class="design__text">Карбон — это углеволокнистая сталь, один из самых совершенных материалов, созданных человечеством. Из него изготавливают гиперкары и детали для авиалайнеров и космических кораблей.</p>
+                        </div>
+                        <div class="tab_item design__item">
+                          <p class="design__text">Медь — элемент одиннадцатой группы четвёртого периода периодической системы химических элементов Д. И. Менделеева, с атомным номером 29. Простое вещество медь — это пластичный переходный металл золотисто-розового цвета. C давних пор широко используется человеком.</p>
+                        </div>
+                        <div class="tab_item design__item">
+                          <p class="design__text">Сталь — сплав железа с углеродом, содержащий не менее 45 % железа и в котором содержание углерода находится в диапазоне от 0,02 до 2,14 %, причём содержанию от 0,6 % до 2,14 % соответствует высокоуглеродистая сталь. Если содержание углерода в сплаве превышает 2,14 %, то такой сплав называется чугуном</p>
+                        </div>
+                        <div class="tab_item design__item">
+                          <p class="design__text">Олово — элемент 14-й группы периодической системы химических элементов, пятого периода, с атомным номером 50. Относится к группе лёгких металлов. При нормальных условиях простое вещество олово — пластичный, ковкий и легкоплавкий блестящий металл серебристо-белого цвета.</p>
+                        </div>
+                      </div>
+                    </div><a class="btn btn--white btn__link section__link btn--border design__link" href="#" title="Перейти в каталог">Перейти в каталог
+                      <svg class="svg-sprite-icon icon icon-arrow-right section__icon">
+                        <use xlink:href="img/sprites/sprite.svg#arrow-right"></use>
+                      </svg></a>
+                  </div>
+                </div>
+              </div>
+              <div class="section__img section__col design__img"><img class="lazy" alt="Дизайн, достойный вас" src="data:image/gif;base64,R0lGODlhFQARAIAAAP///wAAACH5BAEAAAEALAAAAAAVABEAAAIRjI+py+0Po5y02ouz3rx7VQAAOw==" data-src="img/design/1.jpg" height="585" width="945"/>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="section s-section s-section--pl0 pp-scrollable">
+          <div class="section-content assembly">
+            <div class="section-content__wrapper">
+              <div class="section__img section__col assembly__img"><img class="lazy" alt="Ручная сборка" src="data:image/gif;base64,R0lGODlhFQANAIAAAP///wAAACH5BAEAAAEALAAAAAAVAA0AAAIOjI+py+0Po5y02ouzxgUAOw==" data-src="img/assembly/1.jpg" height="585" width="945"/>
+              </div>
+              <div class="section__body section__col assembly__body">
+                <div class="section__text-content assembly__text-content">
+                  <h2 class="h2 section__title assembly__title">Ручная сборка,</h2>
+                  <div class="section__subtitle assembly__subtitle">отличный сервис</div>
+                  <div class="section__text assembly__text">
+                    <p>Composite DNA — это еще и внимание к клиенту на каждом этапе. Мы отказались от полностью конвейерной сборки, потому что не все материалы можно объединить на конвейере. На конвейере производится только каркас, чтобы снизить издержки. Вкрапление композитных материалов производится вручную. Индивидуальная ручная работа гарантирует лучшее качество — продукт сразу же проверяется мастером.</p>
+                    <p>Благодаря полностью оцифрованному сервису кухню доставят и соберут точно в срок. При возникновении сложностей и рекламаций в действие вступает  все тот же оцифрованный сервис по отслеживанию рекламаций.</p>
+                  </div><a class="btn btn--black btn__link section__link assembly__link" href="#" title="Заказать проект">Заказать проект</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="section s-section s-section-catalog pp-scrollable">
+          <div class="section-catalog">
+            <div class="section-content__wrapper">
+              <div class="section-catalog__content">
+                <div class="section-catalog__head">
+                  <h2 class="h2 section-catalog__title">Каталог примерных решений</h2><span class="section-catalog__subtitle">Вы можете ориентироваться на них, когда будете выбирать свой дизайн.</span>
+                </div>
+                <div class="section-catalog__body">
+                  <div class="section-catalog__list">
+                    <div class="section-catalog-item section-catalog__item"><a class="section-catalog-item__img" href="#" title="Mostro"><img class="lazy" alt="Mostro" src="data:image/gif;base64,R0lGODlhMQAeAIAAAP///wAAACH5BAEAAAEALAAAAAAxAB4AAAIljI+py+0Po5y02ouz3rz7D4biSJbmiabqyrbuC8fyTNf2jedrAQA7" data-src="img/catalog/1.jpg" height="300" width="490"/></a>
+                      <div class="section-catalog-item__info"><a class="section-catalog-item__title" href="#" title="Mostro">Mostro</a>
+                        <div class="section-catalog-item__text">Неполированная сталь + эмаль МДФ</div>
+                      </div>
+                    </div>
+                    <div class="section-catalog-item section-catalog__item"><a class="section-catalog-item__img" href="#" title="Stradale"><img class="lazy" alt="Stradale" src="data:image/gif;base64,R0lGODlhMQAeAIAAAP///wAAACH5BAEAAAEALAAAAAAxAB4AAAIljI+py+0Po5y02ouz3rz7D4biSJbmiabqyrbuC8fyTNf2jedrAQA7" data-src="img/catalog/2.jpg" height="300" width="490"/></a>
+                      <div class="section-catalog-item__info"><a class="section-catalog-item__title" href="#" title="Stradale">Stradale</a>
+                        <div class="section-catalog-item__text">Сталь + матовая эмаль</div>
+                      </div>
+                    </div>
+                    <div class="section-catalog-item section-catalog__item"><a class="section-catalog-item__img" href="#" title="Murcielago"><img class="lazy" alt="Murcielago" src="data:image/gif;base64,R0lGODlhMQAeAIAAAP///wAAACH5BAEAAAEALAAAAAAxAB4AAAIljI+py+0Po5y02ouz3rz7D4biSJbmiabqyrbuC8fyTNf2jedrAQA7" data-src="img/catalog/2.jpg" height="300" width="490"/></a>
+                      <div class="section-catalog-item__info"><a class="section-catalog-item__title" href="#" title="Murcielago">Murcielago</a>
+                        <div class="section-catalog-item__text">Карбон + керамика</div>
+                      </div>
+                    </div>
+                  </div>
+                </div><a class="btn btn--white btn__link section__link btn--border section-catalog__link" href="#" title="Смотреть весь каталог">Смотреть весь каталог
+                  <svg class="svg-sprite-icon icon icon-arrow-right section__icon">
+                    <use xlink:href="img/sprites/sprite.svg#arrow-right"></use>
+                  </svg></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="footer">
+      <div class="footer__container">
+        <div class="copyright footer__copyrigh">Composite DNA, 2019 ©</div>
+        <div class="footer__contact">
+          <div class="footer__phone"><a class="footer__phone-link" href="#" title="Наш номер">+7 (495) ХХХ-ХХ-ХХ</a></div>
+          <div class="footer__address">Москва, ул. Краснопресненская, 4</div>
+        </div>
+      </div>
+    </footer>
+    <script src="js/main.min.js"></script>
+    <script src="js/vendor.min.js"></script>
+  </body>
+</html>
