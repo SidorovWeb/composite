@@ -7,21 +7,6 @@
 // 800 Black or Extra Bold or Heavy;
 // 900 Extra Black or Fat or Ultra Black
 
-
-// @mixin font($f-name, $f-style, $f-weight, $f-url) {
-// 	@font-face {
-// 		font-family: $f-name;
-// 		font-display: swap;
-// 		font-style: $f-style;
-// 		font-weight: $f-weight;
-// 		src: url($f-url) format('woff2'),
-// 			url($f-url) format('woff');
-// 	}
-// }
-
-// @include font('ArimoR', normal, 400, '../fonts/Arimo-Regular.woff2');
-// @include font('ArimoB', normal, 500, '../fonts/Arimo-Bold.woff2');
-
 @font-face {
 	font-family: 'Arimo';
 	src: url('../fonts/Arimo-Bold.woff2') format('woff2'),

@@ -1,0 +1,52 @@
+extends ../layouts/default
+include ../helpers/mixins
+
+block variables
+	- const title = "Contacts";
+	- const page = 'page-contacts'
+
+block content
+	section.section-contacts
+		.section__bg.section__bg-contacts
+			+img('img/contacts/1','1280','1080','Наши контакты','data:image/gif;base64,R0lGODlhIAAbAIAAAP///wAAACH5BAEAAAEALAAAAAAgABsAAAIcjI+py+0Po5y02ouz3rz7D4biSJbmiabqyrZHAQA7')
+		.container
+			.contacts
+				.contacts__left-block
+					h2.h2.contacts__title.md-hide Контактная Информация
+					h2.h2.contacts__title.md-show Контакты
+					.contacts__subtitle Если Вы хотите узнать как проехать в наш офис или проложить маршрут, используйте карту
+					a(href="#map", title="Проложить маршрут").btn.btn--border2px.contacts__btn.slowly
+						+icon('p1', 'contacts__icon' )
+						| Проложить маршрут
+				.contacts__right-block
+					.block-contacts.contacts__block-contacts
+						.contacts__address
+							.block-contacts__title.contacts__address-title Адрес
+							p.contacts__address-text Москва,<br>ул. Краснопресненская, 4
+						.contacts__email
+							.block-contacts__title.contacts__email-title Почта
+							a(href="mailto: randommail@gmail.com", title="Почта").block-contacts__link.contacts__email-text randommail@gmail.com
+						.contacts__social
+							.block-contacts__title.contacts__social-title Соц. Сети
+							ul.contacts__social-list.md-hide
+								li.contacts__social-item
+									a(href="#", title="Facebook").block-contacts__link.contacts__social-link Facebook
+								li.contacts__social-item
+									a(href="#", title="Twitter").block-contacts__link.contacts__social-link Twitter
+								li.contacts__social-item
+									a(href="#", title="Instagram").block-contacts__link.contacts__social-link Instagram
+							ul.contacts__social-list.md-show
+								li.contacts__social-item
+									a(href="#", title="Facebook").block-contacts__link.contacts__social-link
+										+icon('facebook', 'contacts__social-icon')
+								li.contacts__social-item
+									a(href="#", title="Twitter").block-contacts__link.contacts__social-link
+										+icon('instagram', 'contacts__social-icon')
+								li.contacts__social-item
+									a(href="#", title="Instagram").block-contacts__link.contacts__social-link
+										+icon('twitter', 'contacts__social-icon')
+
+	.section-map
+		#map
+	script(src="js/main.js")
+	script(src="js/vendor.js")

@@ -69,3 +69,26 @@
 	width: 100%;
 	height: auto;
 }
+
+.page-contacts .header {
+	position: absolute;
+	top: 0;
+	right: 0;
+	left: 0;
+	z-index: 10;
+	width: 100%;
+	height: auto;
+	z-index: 2;
+
+	& .top {
+		background-color: transparent;
+	}
+
+	@media screen and (max-width: 1024px) {
+		position: fixed;
+		top: 0;
+		right: 0;
+		left: 0;
+		background-color: $tundora;
+	}
+}

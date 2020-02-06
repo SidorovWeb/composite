@@ -147,7 +147,7 @@
 
 	&__subtitle {
 		color: $white;
-		font-family: Arimo;
+		font-family: 'Arimo';
 		font-weight: 700;
 		letter-spacing: 4.7px;
 		@include fluidFontSize(16px, 28px, 567px, 1920px, 20px);
@@ -156,7 +156,7 @@
 	}
 
 	&__text {
-		font-family: Arimo;
+		font-family: 'Arimo';
 		font-size: 16px;
 		font-weight: 400;
 		letter-spacing: 0.64px;
@@ -203,7 +203,7 @@
 
 	&__title {
 		color: $white;
-		font-family: Arimo;
+		font-family: 'Arimo';
 		font-weight: 700;
 		text-transform: uppercase;
 		letter-spacing: 4.4px;

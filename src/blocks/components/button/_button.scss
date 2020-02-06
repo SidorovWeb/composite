@@ -22,7 +22,7 @@
 .btn--white {
 	background-color: $white;
 	color: $tundora;
-	font-family: Arimo;
+	font-family: 'Arimo';
 	font-size: 14px;
 	font-weight: 700;
 	letter-spacing: 0.84px;
@@ -43,7 +43,7 @@
 .btn--black {
 	background-color: $color-bg;
 	color: $white;
-	font-family: Arimo;
+	font-family: 'Arimo';
 	font-size: 14px;
 	font-weight: 700;
 	letter-spacing: 0.84px;
@@ -59,7 +59,7 @@
 .btn--grey {
 	background-color: $gallery;
 	color: $text;
-	font-family: Arimo;
+	font-family: 'Arimo';
 	font-size: 14px;
 	font-weight: 700;
 	letter-spacing: 0.84px;
@@ -93,4 +93,36 @@
 
 .btn--border {
 	border: 1px solid #d9d9d9;
+}
+
+.btn--border2px {
+	border: 2px solid $white;
+	color: #ffffff;
+	font-family: 'Arimo';
+	font-size: 14px;
+	font-weight: 700;
+	letter-spacing: 0.84px;
+	background-color: transparent;
+	line-height: 28px;
+	text-transform: uppercase;
+	transition: $transition;
+
+
+	&:hover {
+		border: 2px solid $white;
+		background-color: $white;
+
+	}
+
+	& .icon {
+		width: 30px;
+		height: 23px;
+		fill: $white;
+		transition: $transition;
+
+		@include md-block {
+			width: 18px;
+			height: 15px;
+		}
+	}
 }

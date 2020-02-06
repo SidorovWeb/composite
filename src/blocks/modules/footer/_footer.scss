@@ -1,13 +1,8 @@
 .footer {
-	z-index: 9;
-	position: fixed;
-	bottom: 0;
-	left: 0;
-	right: 0;
-	opacity: 0;
+	position: relative;
 	height: auto;
+	opacity: 1;
 	width: 100%;
-	transition: $transition;
 
 	&__container {
 		display: flex;
@@ -42,15 +37,10 @@
 
 	&__copyrigh {
 		color: rgba($mine-shaft, .5);
-		font-family: Arimo;
+		font-family: 'Arimo';
 		font-size: 14px;
 		font-weight: 400;
 		letter-spacing: 0.56px;
-	}
-
-	&.opacity {
-		opacity: 1;
-		transition: $transition;
 	}
 
 	&__contact {
@@ -65,7 +55,7 @@
 
 	&__phone-link {
 		color: rgba($mine-shaft, .5);
-		font-family: Arimo;
+		font-family: 'Arimo';
 		letter-spacing: 0.56px;
 		line-height: 20px;
 		font-weight: 700;
@@ -79,7 +69,7 @@
 
 	&__address {
 		color: rgba($mine-shaft, .5);
-		font-family: Arimo;
+		font-family: 'Arimo';
 		font-size: 14px;
 		font-weight: 400;
 		letter-spacing: 0.56px;
@@ -91,13 +81,23 @@
 	}
 }
 
-.page-product-card .footer {
-	z-index: 1;
-	position: relative;
-	bottom: initial;
-	left: initial;
-	right: initial;
+.page-main .footer {
+	z-index: 9;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	opacity: 0;
 	height: auto;
-	opacity: 1;
 	width: 100%;
+	transition: $transition;
+
+	&.opacity {
+		opacity: 1;
+		transition: $transition;
+	}
+}
+
+.page-contacts .footer {
+	display: none;
 }

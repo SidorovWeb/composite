@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Contacts</title>
+    <meta name="theme-color" content="#fff">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta property="og:image" content="img/@1x/1.jpg">
+    <!-- Chrome, Firefox OS and Opera-->
+    <meta name="theme-color" content="#000000">
+    <!-- Windows Phone-->
+    <meta name="msapplication-navbutton-color" content="#000000">
+    <!-- iOS Safari-->
+    <meta name="apple-mobile-web-app-status-bar-style" content="#000000">
+    <link rel="shortcut icon" href="img/favicons/favicon.ico" type="image/x-icon">
+    <link rel="icon" sizes="16x16" href="img/favicons/favicon-16x16.png" type="image/png">
+    <link rel="icon" sizes="32x32" href="img/favicons/favicon-32x32.png" type="image/png">
+    <link rel="apple-touch-icon-precomposed" href="img/favicons/apple-touch-icon-precomposed.png">
+    <link rel="apple-touch-icon" href="img/favicons/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="57x57" href="img/favicons/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="img/favicons/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="img/favicons/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="img/favicons/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="img/favicons/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="img/favicons/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="img/favicons/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="img/favicons/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="167x167" href="img/favicons/apple-touch-icon-167x167.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon-180x180.png">
+    <link rel="apple-touch-icon" sizes="1024x1024" href="img/favicons/apple-touch-icon-1024x1024.png">
+    <link rel="preload" as="font" href="fonts/Arimo-Regular.woff2" type="font/woff2" crossorigin>
+    <link rel="preload" as="font" href="fonts/Arimo-Bold.woff2" type="font/woff2" crossorigin>
+    <link rel="preload" as="font" href="fonts/Arimo-Regular.woff" type="font/woff" crossorigin>
+    <link rel="preload" as="font" href="fonts/Arimo-Bold.woff" type="font/woff" crossorigin>
+    <link rel="stylesheet" href="styles/main.min.css">
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&amp;lang=ru_RU" type="text/javascript"></script>
+  </head>
+  <body class="page-contacts">
+    <header class="header">
+      <div class="top"><a class="logo" href="/" title="COMPOSITE DNA"><img alt="Лого сайта" src="img/logo/logo2.png" height="48" width="165"></a>
+        <nav class="nav">
+          <ul class="nav__list">
+            <li class="nav__item"><a class="nav__link" href="index.html" title="Главная">Главная</a></li>
+            <li class="nav__item"><a class="nav__link" href="catalog.html" title="Каталог Решений">Каталог Решений</a></li>
+            <li class="nav__item"><a class="nav__link" href="delivery-payment.html" title="Доставка и сборка">Доставка и сборка</a></li>
+            <li class="nav__item"><a class="nav__link" href="contacts.html" title="Контакты">Контакты</a></li>
+          </ul>
+        </nav>
+        <div class="hamburger"><span class="hamburger__span"></span><span class="hamburger__span"></span><span class="hamburger__span"></span></div>
+      </div>
+    </header>
+    <div class="content">
+      <section class="section-contacts">
+        <div class="section__bg section__bg-contacts"><img class="lazy" alt="Наши контакты" src="data:image/gif;base64,R0lGODlhIAAbAIAAAP///wAAACH5BAEAAAEALAAAAAAgABsAAAIcjI+py+0Po5y02ouz3rz7D4biSJbmiabqyrZHAQA7" data-src="img/contacts/1.jpg" height="1080" width="1280"/>
+        </div>
+        <div class="container">
+          <div class="contacts">
+            <div class="contacts__left-block">
+              <h2 class="h2 contacts__title md-hide">Контактная Информация</h2>
+              <h2 class="h2 contacts__title md-show">Контакты</h2>
+              <div class="contacts__subtitle">Если Вы хотите узнать как проехать в наш офис или проложить маршрут, используйте карту</div><a class="btn btn--border2px contacts__btn slowly" href="#map" title="Проложить маршрут">
+                <svg class="svg-sprite-icon icon icon-p1 contacts__icon">
+                  <use xlink:href="img/sprites/sprite.svg#p1"></use>
+                </svg>Проложить маршрут</a>
+            </div>
+            <div class="contacts__right-block">
+              <div class="block-contacts contacts__block-contacts">
+                <div class="contacts__address">
+                  <div class="block-contacts__title contacts__address-title">Адрес</div>
+                  <p class="contacts__address-text">Москва,<br>ул. Краснопресненская, 4</p>
+                </div>
+                <div class="contacts__email">
+                  <div class="block-contacts__title contacts__email-title">Почта</div><a class="block-contacts__link contacts__email-text" href="mailto: randommail@gmail.com" title="Почта">randommail@gmail.com</a>
+                </div>
+                <div class="contacts__social">
+                  <div class="block-contacts__title contacts__social-title">Соц. Сети</div>
+                  <ul class="contacts__social-list md-hide">
+                    <li class="contacts__social-item"><a class="block-contacts__link contacts__social-link" href="#" title="Facebook">Facebook</a></li>
+                    <li class="contacts__social-item"><a class="block-contacts__link contacts__social-link" href="#" title="Twitter">Twitter</a></li>
+                    <li class="contacts__social-item"><a class="block-contacts__link contacts__social-link" href="#" title="Instagram">Instagram</a></li>
+                  </ul>
+                  <ul class="contacts__social-list md-show">
+                    <li class="contacts__social-item"><a class="block-contacts__link contacts__social-link" href="#" title="Facebook">
+                        <svg class="svg-sprite-icon icon icon-facebook contacts__social-icon">
+                          <use xlink:href="img/sprites/sprite.svg#facebook"></use>
+                        </svg></a></li>
+                    <li class="contacts__social-item"><a class="block-contacts__link contacts__social-link" href="#" title="Twitter">
+                        <svg class="svg-sprite-icon icon icon-instagram contacts__social-icon">
+                          <use xlink:href="img/sprites/sprite.svg#instagram"></use>
+                        </svg></a></li>
+                    <li class="contacts__social-item"><a class="block-contacts__link contacts__social-link" href="#" title="Instagram">
+                        <svg class="svg-sprite-icon icon icon-twitter contacts__social-icon">
+                          <use xlink:href="img/sprites/sprite.svg#twitter"></use>
+                        </svg></a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="section-map">
+        <div id="map"></div>
+      </div>
+      <script src="js/main.min.js"></script>
+      <script src="js/vendor.min.js"></script>
+    </div>
+    <footer class="footer">
+      <div class="footer__container">
+        <div class="copyright footer__copyrigh">Composite DNA, 2019 ©</div>
+        <div class="footer__contact">
+          <div class="footer__phone"><a class="footer__phone-link" href="#" title="Наш номер">+7 (495) ХХХ-ХХ-ХХ</a></div>
+          <div class="footer__address">Москва, ул. Краснопресненская, 4</div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

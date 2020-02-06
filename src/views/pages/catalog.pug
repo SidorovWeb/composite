@@ -1,0 +1,101 @@
+extends ../layouts/default
+include ../helpers/mixins
+
+block variables
+	- const title = "Catalog";
+	- const page = 'page-catalog'
+
+block content
+	.container
+		.page-catalog-wrapper
+			.section-catalog__head
+				h2.h2.section-catalog__title Каталог решений
+				span.section-catalog__subtitle.page-catalog__subtitle.opacity5 Показано 9 товаров из 80
+				span.section-catalog__subtitle.md-show
+					| Вы можете ориентироваться на них, когда будете выбирать свой дизайн.
+			.section-catalog__body
+				.section-catalog__list
+					.section-catalog-item.section-catalog__item
+						a(href="product-card.html", title="Mostro").section-catalog-item__img
+							+img('img/catalog/1','490','300','Mostro','data:image/gif;base64,R0lGODlhMQAeAIAAAP///wAAACH5BAEAAAEALAAAAAAxAB4AAAIljI+py+0Po5y02ouz3rz7D4biSJbmiabqyrbuC8fyTNf2jedrAQA7')
+						.section-catalog-item__info
+							a(href="product-card.html", title="Mostro").section-catalog-item__title Mostro
+							.section-catalog-item__text Неполированная сталь + эмаль МДФ
+							.section-catalog-item__price
+								span.catalog-item__price 87 990
+								span.catalog-item__currency &#8381;
+					.section-catalog-item.section-catalog__item
+						a(href="product-card.html", title="Stradale").section-catalog-item__img
+							+img('img/catalog/2','490','300','Stradale','data:image/gif;base64,R0lGODlhMQAeAIAAAP///wAAACH5BAEAAAEALAAAAAAxAB4AAAIljI+py+0Po5y02ouz3rz7D4biSJbmiabqyrbuC8fyTNf2jedrAQA7')
+						.section-catalog-item__info
+							a(href="product-card.html", title="Stradale").section-catalog-item__title Stradale
+							.section-catalog-item__text Сталь + матовая эмаль
+							.section-catalog-item__price
+								span.catalog-item__price 126 990
+								span.catalog-item__currency &#8381;
+					.section-catalog-item.section-catalog__item
+						a(href="product-card.html", title="Murcielago").section-catalog-item__img
+							+img('img/catalog/3','490','300','Murcielago','data:image/gif;base64,R0lGODlhMQAeAIAAAP///wAAACH5BAEAAAEALAAAAAAxAB4AAAIljI+py+0Po5y02ouz3rz7D4biSJbmiabqyrbuC8fyTNf2jedrAQA7')
+						.section-catalog-item__info
+							a(href="product-card.html", title="Murcielago").section-catalog-item__title Murcielago
+							.section-catalog-item__text Карбон + керамика
+							.section-catalog-item__price
+								span.catalog-item__price 159 990
+								span.catalog-item__currency &#8381;
+					.section-catalog-item.section-catalog__item
+						a(href="product-card.html", title="Mostro").section-catalog-item__img
+							+img('img/catalog/4','490','300','Mostro','data:image/gif;base64,R0lGODlhMQAeAIAAAP///wAAACH5BAEAAAEALAAAAAAxAB4AAAIljI+py+0Po5y02ouz3rz7D4biSJbmiabqyrbuC8fyTNf2jedrAQA7')
+						.section-catalog-item__info
+							a(href="product-card.html", title="Mostro").section-catalog-item__title Mostro
+							.section-catalog-item__text Неполированная сталь + эмаль МДФ
+							.section-catalog-item__price
+								span.catalog-item__price 87 990
+								span.catalog-item__currency &#8381;
+					.section-catalog-item.section-catalog__item
+						a(href="product-card.html", title="Stradale").section-catalog-item__img
+							+img('img/catalog/5','490','300','Stradale','data:image/gif;base64,R0lGODlhMQAeAIAAAP///wAAACH5BAEAAAEALAAAAAAxAB4AAAIljI+py+0Po5y02ouz3rz7D4biSJbmiabqyrbuC8fyTNf2jedrAQA7')
+						.section-catalog-item__info
+							a(href="product-card.html", title="Stradale").section-catalog-item__title Stradale
+							.section-catalog-item__text Сталь + матовая эмаль
+							.section-catalog-item__price
+								span.catalog-item__price 87 990
+								span.catalog-item__currency &#8381;
+					.section-catalog-item.section-catalog__item
+						a(href="product-card.html", title="Murcielago").section-catalog-item__img
+							+img('img/catalog/6','490','300','Murcielago','data:image/gif;base64,R0lGODlhMQAeAIAAAP///wAAACH5BAEAAAEALAAAAAAxAB4AAAIljI+py+0Po5y02ouz3rz7D4biSJbmiabqyrbuC8fyTNf2jedrAQA7')
+						.section-catalog-item__info
+							a(href="product-card.html", title="Murcielago").section-catalog-item__title Murcielago
+							.section-catalog-item__text Карбон + керамика
+							.section-catalog-item__price
+								span.catalog-item__price 87 990
+								span.catalog-item__currency &#8381;
+					.section-catalog-item.section-catalog__item
+						a(href="product-card.html", title="Mostro").section-catalog-item__img
+							+img('img/catalog/7','490','300','Mostro','data:image/gif;base64,R0lGODlhMQAeAIAAAP///wAAACH5BAEAAAEALAAAAAAxAB4AAAIljI+py+0Po5y02ouz3rz7D4biSJbmiabqyrbuC8fyTNf2jedrAQA7')
+						.section-catalog-item__info
+							a(href="product-card.html", title="Mostro").section-catalog-item__title Mostro
+							.section-catalog-item__text Неполированная сталь + эмаль МДФ
+							.section-catalog-item__price
+								span.catalog-item__price 87 990
+								span.catalog-item__currency &#8381;
+					.section-catalog-item.section-catalog__item
+						a(href="product-card.html", title="Stradale").section-catalog-item__img
+							+img('img/catalog/8','490','300','Stradale','data:image/gif;base64,R0lGODlhMQAeAIAAAP///wAAACH5BAEAAAEALAAAAAAxAB4AAAIljI+py+0Po5y02ouz3rz7D4biSJbmiabqyrbuC8fyTNf2jedrAQA7')
+						.section-catalog-item__info
+							a(href="product-card.html", title="Stradale").section-catalog-item__title Stradale
+							.section-catalog-item__text Сталь + матовая эмаль
+							.section-catalog-item__price
+								span.catalog-item__price 87 990
+								span.catalog-item__currency &#8381;
+					.section-catalog-item.section-catalog__item
+						a(href="product-card.html", title="Murcielago").section-catalog-item__img
+							+img('img/catalog/9','490','300','Murcielago','data:image/gif;base64,R0lGODlhMQAeAIAAAP///wAAACH5BAEAAAEALAAAAAAxAB4AAAIljI+py+0Po5y02ouz3rz7D4biSJbmiabqyrbuC8fyTNf2jedrAQA7')
+						.section-catalog-item__info
+							a(href="product-card.html", title="Murcielago").section-catalog-item__title Murcielago
+							.section-catalog-item__text Карбон + керамика
+							.section-catalog-item__price
+								span.catalog-item__price 87 990
+								span.catalog-item__currency &#8381;
+block scripts
+	script(src="js/main.js")
+	script(src="js/vendor.js")

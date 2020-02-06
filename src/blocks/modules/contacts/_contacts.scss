@@ -1,0 +1,315 @@
+.page-contacts .logo img {
+	fill: $white;
+}
+
+.section-contacts {
+	height: 100vh;
+	width: 100%;
+	min-height: 809px;
+
+
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+
+	& .container {
+		height: calc(100vh - 159px);
+		max-width: 1470px;
+		width: 100%;
+		z-index: 1;
+		min-height: 809px;
+
+		@media screen and (max-width: 1600px) {
+			height: calc(100vh - 107px);
+		}
+
+		@media screen and (max-width: 1280px) {
+			height: calc(100vh - 67px);
+		}
+
+		@media screen and (max-width: 1024px) {
+			height: 100vh;
+		}
+
+		@include md-block {
+			height: auto;
+			padding: 0;
+		}
+
+	}
+}
+
+.section__bg-contacts {
+	min-height: 809px;
+
+	&:before {
+		position: absolute;
+		content: '';
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background-color: rgba($color-bg, $alpha: .9);
+		z-index: 1;
+	}
+}
+
+.page-contacts .nav__link {
+	color: $white;
+
+	&:hover {
+		color: rgba($white, .7);
+	}
+
+	@media screen and (max-width: 1140px) {
+		color: $text;
+
+		&:hover {
+			color: rgba($text, .7);
+		}
+	}
+}
+
+.page-contacts .hamburger__span {
+	background-color: $white;
+}
+
+.page-contacts .hamburger--open .hamburger__span {
+	&:nth-child(2) {
+		background-color: transparent;
+	}
+}
+
+
+.contacts {
+	height: 100%;
+
+	@include row-flex();
+	align-items: center;
+
+	@include md-block {
+		display: block;
+		padding-right: 37px;
+		padding-left: 37px;
+		margin-left: 0 !important;
+		margin-right: 0 !important;
+		padding-top: 123px;
+	}
+
+	&__left-block {
+		@include col();
+		@include size(6);
+		@include size-md(12);
+		transform: translateY(-29px);
+
+		@media screen and (max-width: 1600px) {
+			padding-left: 22px;
+		}
+
+		@include md-block {
+			transform: translateY(0);
+			padding-left: 0;
+			padding-right: 0;
+			width: 100%;
+			margin-left: 0 !important;
+			margin-right: 0 !important;
+		}
+	}
+
+	&__right-block {
+		@include col();
+		@include size(6);
+		@include size-md(12);
+		display: flex;
+		justify-content: center;
+		transform: translateY(-19px);
+
+		@media screen and (max-width: 1600px) {
+			padding-right: 22px;
+		}
+
+		@include md-block {
+			justify-content: flex-start;
+			transform: translateY(0);
+			padding-left: 0;
+			padding-right: 0;
+			width: 100%;
+			margin-left: 0 !important;
+			margin-right: 0 !important;
+			padding-top: 55px;
+		}
+
+	}
+
+	&__title {
+		@include fluidFontSize(36px, 64px, 567px, 1920px, 36px);
+		color: $white;
+		font-family: 'Arimo';
+		font-weight: 700;
+		letter-spacing: 2.56px;
+		text-transform: uppercase;
+		line-height: 1.1;
+		margin-bottom: 30px;
+	}
+
+	&__subtitle {
+		max-width: 389px;
+		color: $white;
+		font-family: 'Arimo';
+		font-size: 16px;
+		font-weight: 400;
+		letter-spacing: 0.64px;
+		line-height: 22px;
+		margin-bottom: 48px;
+
+		@include md-block {
+			margin-bottom: 25px;
+			max-width: 246px;
+		}
+	}
+
+	&__btn {
+		padding: 1.036em 1.64em;
+
+		@include md-block {
+			padding: 1.5em 2.28em !important;
+		}
+
+		&:hover {
+			color: $tundora;
+
+			.contacts__icon {
+				fill: $tundora;
+			}
+		}
+	}
+
+	&__icon {
+		margin-right: 12px;
+		margin-left: 2px;
+		transform: translateY(25%);
+	}
+
+	&__address-text {
+		font-size: 20px;
+		font-weight: 400;
+		letter-spacing: 0.8px;
+		line-height: 28px;
+		// max-width: 289px;
+		margin-top: 0;
+
+		@include md-block {
+			font-size: 14px;
+			line-height: 22px;
+		}
+	}
+
+	&__social-list {
+		@include md-block {
+
+			&>*:not(:last-child) {
+				margin-right: 10px;
+
+				@include md-block {
+					margin-right: 6px;
+				}
+			}
+		}
+	}
+
+	&__social-link {
+		text-decoration: underline;
+
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+
+	&__social-item {
+		@include md-block {
+			display: inline-block;
+		}
+	}
+
+	&__social-icon {
+		@include md-block {
+			width: 32px;
+			height: 32px;
+			fill: $white;
+		}
+	}
+}
+
+.block-contacts {
+	color: $white;
+	font-family: 'Arimo';
+	padding-left: 200px;
+
+	@media screen and (max-width: 1600px) {
+		padding-left: 150px;
+	}
+
+	@include lg-block {
+		padding-left: 50px;
+	}
+
+	@include md-block {
+		padding-left: 0;
+	}
+
+	&>*:not(:last-child) {
+		margin-bottom: 74px;
+
+		@include md-block {
+			margin-bottom: 32px;
+		}
+	}
+
+	&__title {
+		font-size: 28px;
+		font-weight: 700;
+		text-transform: uppercase;
+		margin-bottom: 10px;
+
+		@include md-block {
+			font-size: 20px;
+		}
+	}
+
+	&__link {
+		color: $white;
+		font-size: 20px;
+		font-weight: 400;
+		letter-spacing: 0.8px;
+		line-height: 28px;
+		transition: $transition;
+
+		@include md-block {
+			font-size: 14px;
+			line-height: 22px;
+		}
+
+		&:hover {
+			color: darken($white, 25%);
+		}
+	}
+
+}
+
+
+#map {
+	width: 100%;
+	height: 405px;
+
+	@include md-block {
+		height: 474px;
+	}
+}
+
+
+// черно-белая карта
+
+// [class*="ymaps-2"][class*="-ground-pane"] {
+// 	filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale");
+// 	-webkit-filter: grayscale(100%);
+// }

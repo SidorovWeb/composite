@@ -136,7 +136,7 @@ a:focus {
 }
 
 .content {
-    position: relative;
+    // position: relative;
     flex: 1 0 auto;
 }
 
@@ -159,4 +159,20 @@ a:focus {
     font-family: Arimo;
     font-weight: 700;
     text-transform: uppercase;
+}
+
+.md-show {
+    display: none;
+
+    @include md-block {
+        display: block;
+    }
+}
+
+.md-hide {
+    display: block;
+
+    @include md-block {
+        display: none;
+    }
 }

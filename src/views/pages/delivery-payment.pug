@@ -1,0 +1,35 @@
+extends ../layouts/default
+include ../helpers/mixins
+
+block variables
+	- const title = "Delivery-Payment";
+	- const page = 'page-delivery-payment'
+
+block content
+	.section.s-section.s-section-produced.s-section--pr0.section-delivery-payment
+		.section-content.produced.delivery-payment__content
+			.section-content__wrapper
+				.section__body.section__col.produced__body
+					.section__text-content.produced__text-content
+						h2.h2.section__title.produced__title Оплата
+						.section__text.produced__text
+							p
+								| Мы принимаем оплату наличными и банковскими картами. Также, вы можете оформить кредит или рассрочку. Первую часть оплаты (от 20% стоимости) вы вносите, когда подписываете с нами договор. Вторую часть вы оплачиваете после того, как ваш заказ прибудет на склад в Москве.
+				.section__img.section__col
+					+img('img/delivery-payment/2','945','585','Оплата','data:image/gif;base64,R0lGODlhFQANAIAAAP///wAAACH5BAEAAAEALAAAAAAVAA0AAAIOjI+py+0Po5y02ouzxgUAOw==')
+	.section.s-section.s-section-individual.s-section--pl0.section-delivery-payment
+		.section-content.individual.delivery-payment__content
+			.section-content__wrapper.delivery-payment__wrapper
+				.section__img.section__col
+					+img('img/delivery-payment/1','945','585','ДОСТАВКА','data:image/gif;base64,R0lGODlhFQANAIAAAP///wAAACH5BAEAAAEALAAAAAAVAA0AAAIOjI+py+0Po5y02ouzxgUAOw==')
+				.section__body.section__col.individual__body
+					.section__text-content.individual__text-content
+						h2.h2.section__title.individual__title Доставка
+						.section__text.individual__text
+							p
+								| Как только кухня будет готова и прибудет на наш склад, менеджер свяжется с вами. Вы вносите оставшуются часть стоимости, после чего мы договариваемся о времени доставки заказа.Доставка включает в себя погрузку-выгрузку, доставку до подъезда и подъем-занос в квартиру.
+
+							p
+								| Стоимость доставки – 3000 рублей. За пределами МКАД к стоимости доставки следует добавить 30 руб за 1 км, после 50 км – 50 руб. за 1 км.
+	script(src="js/main.js")
+	script(src="js/vendor.js")

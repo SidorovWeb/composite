@@ -59,7 +59,7 @@
 
 	&__subtitle {
 		color: $mine-shaft;
-		font-family: Arimo;
+		font-family: 'Arimo';
 		font-weight: 700;
 		@include fluidFontSize(20px, 42px, 567px, 1920px, 20px);
 		text-transform: uppercase;

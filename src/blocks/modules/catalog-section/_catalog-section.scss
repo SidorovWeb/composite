@@ -61,7 +61,7 @@
 
 	&__title {
 		color: $mine-shaft;
-		font-family: Arimo;
+		font-family: 'Arimo';
 		font-weight: 700;
 		text-transform: uppercase;
 		padding-right: 37px;
@@ -76,74 +76,70 @@
 	&__subtitle {
 		max-width: 350px;
 		color: $mine-shaft;
-		font-family: Arimo;
+		font-family: 'Arimo';
 		font-size: 14px;
 		font-weight: 400;
 		letter-spacing: 0.56px;
 		line-height: 20px;
-		transform: translateX(-235px);
-
-		@media screen and (max-width: 1280px) {
-			transform: none;
-		}
 	}
 
 	&__list {
-		display: flex;
-		justify-content: center;
+		@include row-flex();
 
 		@include md-block {
-			flex-wrap: wrap;
-			margin-top: 30px;
+			margin: 0;
 		}
 	}
 
 	&__item {
-		width: calc(100% / 3);
-		margin-right: 30px;
-
-		&:last-child {
-			margin-right: 0;
-		}
+		@include col();
+		@include size(4);
+		@include size-md(12);
+		margin-bottom: 55px;
+		display: flex;
+		flex-direction: column;
 
 		@include md-block {
 			position: relative;
 			width: 100%;
 			margin-bottom: 40px;
 			margin-right: 0;
+			margin-left: 0;
 
-			&:nth-child(1) {
+
+			&:nth-child(1n) {
 				padding-left: 37px;
 
 				.section-catalog-item__info {
 					@include md-block {
-						bottom: 50px;
+						bottom: 35px;
 						left: 87px;
 						z-index: 1;
+					}
+
+					@include sm-block {
+						bottom: 20px;
+						left: 70px;
 					}
 				}
 			}
 
-			&:nth-child(2) {
+			&:nth-child(2n) {
 				padding-right: 37px;
+				padding-left: 0;
 
 				.section-catalog-item__info {
 					@include md-block {
-						bottom: 50px;
+						bottom: 35px;
 						right: 87px;
+						left: initial;
 						z-index: 1;
 					}
-				}
-			}
 
-			&:nth-child(3) {
-				padding-left: 37px;
-
-				.section-catalog-item__info {
-					@include md-block {
-						bottom: 50px;
-						left: 87px;
-						z-index: 1;
+					@include sm-block {
+						bottom: 20px;
+						right: 70px;
+						left: initial;
 					}
 				}
 			}
@@ -181,6 +177,10 @@
 }
 
 .section-catalog-item__info {
+	flex-grow: 1;
+	display: flex;
+	flex-direction: column;
+
 	@include md-block {
 		position: absolute;
 	}
@@ -188,7 +188,7 @@
 
 .section-catalog-item {
 	&__img {
-		margin-bottom: 40px;
+		margin-bottom: 38px;
 		display: block;
 		position: relative;
 
@@ -216,7 +216,7 @@
 
 	&__title {
 		color: $mine-shaft;
-		font-family: Arimo;
+		font-family: 'Arimo';
 		font-size: 18px;
 		font-weight: 700;
 		text-transform: uppercase;
@@ -240,16 +240,118 @@
 
 	&__text {
 		color: $mine-shaft;
-		font-family: Arimo;
+		font-family: 'Arimo';
 		font-size: 16px;
 		font-weight: 400;
 		letter-spacing: 0.64px;
 		line-height: 22px;
+		margin-bottom: 15px;
 
 		@include md-block {
 			color: $white;
 			font-size: 13px;
 			letter-spacing: 0.52px;
+			max-width: 160px;
 		}
+
+		@include sm-block {
+			margin-bottom: 5px;
+		}
+	}
+
+	&__price {
+		margin-top: auto;
+	}
+}
+
+.between {
+	transform: translateX(-235px);
+
+	@media screen and (max-width: 1280px) {
+		transform: none;
+	}
+}
+
+.opacity5 {
+	opacity: .5;
+}
+
+.page-catalog .container {
+	max-width: 1557px;
+
+	@media screen and (max-width: 1600px) {
+		padding-left: 37px;
+		padding-right: 37px;
+	}
+
+	@include md-block {
+		padding: 0;
+	}
+}
+
+
+.page-catalog-wrapper {
+	padding-top: 72px;
+}
+
+.page-catalog-wrapper .section-catalog__head {
+	margin-bottom: 91px;
+
+	@media screen and (max-width: 1024px) {
+		margin-top: 62px;
+	}
+
+}
+
+.page-catalog__subtitle {
+	transform: translateY(13px);
+
+	@include md-block {
+		display: none;
+	}
+}
+
+.md-show {
+	display: none;
+
+	@include md-block {
+		display: block;
+	}
+}
+
+.page-catalog .section-catalog__title {
+	@include md-block {
+		font-size: 24px;
+		margin-bottom: 26px;
+		line-height: 30px;
+	}
+}
+
+.page-catalog .section-catalog__head {
+	@include md-block {
+		padding-left: 37px;
+		padding-right: 44px;
+		margin-bottom: 61px;
+	}
+}
+
+.catalog-item__price {
+	color: $mine-shaft;
+	font-family: 'Arimo';
+	font-size: 18px;
+	font-weight: 700;
+	text-transform: uppercase;
+	margin-right: 6px;
+
+	@include md-block {
+		color: $white;
+	}
+}
+
+.catalog-item__currency {
+	font-size: 18px;
+
+	@include md-block {
+		color: $white;
 	}
 }

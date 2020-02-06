@@ -37,6 +37,8 @@ html(lang="ru")
 		link(rel="preload" as="font" href="fonts/Arimo-Regular.woff" type="font/woff" crossorigin)
 		link(rel="preload" as="font" href="fonts/Arimo-Bold.woff" type="font/woff" crossorigin)
 		link(rel="stylesheet" href="styles/main.css")
+		if page == 'page-contacts'
+			script(src='https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU', type='text/javascript')
 	body(class=page)
 		header.header
 			include  ../../blocks/modules/header/header.pug

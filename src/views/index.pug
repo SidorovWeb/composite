@@ -2,7 +2,7 @@ extends layouts/default
 include helpers/mixins
 
 block variables
-	- const title = "gulp-pug-starter"
+	- const title = "Main"
 	- const page = 'page-main'
 
 block content
@@ -18,7 +18,7 @@ block content
 		.section.s-section.s-section--pl0.pp-scrollable
 			include ../blocks/modules/assembly/assembly.pug
 		.section.s-section.s-section-catalog.pp-scrollable
-			include ../blocks/modules/catalog/catalog.pug
+			include ../blocks/modules/catalog-section/catalog-section.pug
 block scripts
 	script(src="js/main.js")
 	script(src="js/vendor.js")
